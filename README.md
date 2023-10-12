@@ -24,21 +24,62 @@
 
 # Understanding Containers
 
-Before diving into Kubernetes, make sure you have a solid grasp of containerization concepts. You can start with Docker, which is the most widely used containerization technology:
-
-    Docker Fundamentals: Learn how to create, manage, and work with Docker containers. Understand Docker images, containers, and the Docker CLI.
 
 # Kubernetes Basics
 
-Once you're comfortable with containers, you can start learning Kubernetes:
+-  Open Source Plateform for `managing containerized workloads`.
+-  Kubernetes originates from Greek, meaning `helmsman or pilot`.
+- Containers are a good way to bundle and run your applications
+- Kubernetes provides you with a `framework to run distributed systems` resiliently. It `takes care of scaling and failover` for your application, `provides deployment patterns`, and more.
+- It provides some generally applicable features common to `PaaS offerings`, such as `deployment`, `scaling`, `load balancing`, and lets users `integrate their logging, monitoring, and alerting solutions`.
+- It eliminates the need for orchestration.
+- Kubernetes comprises a set of independent, composable control processes that continuously drive the current state towards the provided desired state.
 
-    Kubernetes Overview: Get an understanding of what Kubernetes is, its architecture, and its key components.
+- ## Features
 
-    Kubectl: Learn how to use kubectl, the command-line tool for interacting with Kubernetes clusters.
+    1. `Service discovery and load balancing` - if traffic high kubenetes is able to load balance
+    2. `Storage orchestration` - Allows mounting of storage system of choice
+    3. `Automated rollouts and rollbacks`  - Can automate kubernetes to create new container 
+    4. `Self healing` - Kubernetes restarts containers that fail.
+    5. `Secrete and configuration mangement` - lets you store and manage sensitive information
+    6. `Horizontal Scaling` - Scale your application up or down with simple command or UI
 
-    Creating and Managing Pods: Pods are the basic building blocks in Kubernetes. Understand how to create and manage them.
+- ## Kubernetes Components
 
-    Deployments and ReplicaSets: Explore how to create and manage scalable, self-healing applications using Deployments and ReplicaSets.
+    - `Node`
+        - Kubernetes cluster consist of set of nodes. Nodes are set of worker machines.
+        - Components
+            1. kublet - agent that runs on each node in the cluster. Make sures containers are runnning in Pod.
+            2. kube-proxy - a network proxy that runs on each node in your cluster.
+            3. container runtime - It is responsible for managing the execution and lifecycle of containers within the Kubernetes environment.
+            4. addons - Addons use Kubernetes resources (DaemonSet, Deployment, etc) to implement cluster features.
+            5. DNS - Cluster DNS is a DNS server.
+            6. Web UI Dashboard - web-based UI for Kubernetes clusters.
+            7. Container Resource Monitoring - records generic time-series metrics
+            8. Cluster-level Logging - is responsible for saving container logs to a central log store with search/browsing interface.
+            9. Network Pluggins - are responsible for allocating IP addresses to pods and enabling them to communicate with each other within the cluster.
+
+    - `Pod`
+        - Component of the application workload.
+    - `Control Plane`
+        - manages the worker nodes and the Pods in the cluster
+        - Control plane's components make global decisions about the cluster.
+        - Control plane components can be run on any machine in the cluster.
+        - Components
+            1. kubi-apiserver - exposes Kubernetes API
+            2. etcd - Key value store for storing cluster data
+            3. kubi-scheduler -  watches newly created pod which has no assigned node and selects them node.
+            4. kube-controller-manager - runs controller process - like node controller, Service controller, Job controller, EndpointSlice controller
+            5. cloud-controller-manager - lets you link your cluster into your cloud provider's API
+            
+- ## Install : Kubernetes Install
+    
+    1. [Ubuntu Install](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+    2. [MacOS Install](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
+    3. [Windows Install](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
+
+- ## Minikube : Install Minikube
+    - [Minicube Install](https://minikube.sigs.k8s.io/docs/start/)
 
 # Services and Networking
 
