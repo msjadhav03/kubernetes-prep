@@ -83,6 +83,71 @@
 
     1. [Minicube Install](https://minikube.sigs.k8s.io/docs/start/)
 
+- <h3> Namespace : Creating NameSpace </h3>
+
+```yaml
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: development
+```
+- <h3> Deployments : Creating Deployment </h3>
+
+Basic structure
+```yaml
+---
+apiVersion: 
+kind: 
+metadata: 
+  name: 
+  namespace: 
+  labels: 
+    app: 
+spec: 
+  replicas:
+  selector:
+  template:
+    metadata:
+    spec:
+      containers:
+      - name:
+        image:
+        ports:
+        - containerPort: 
+        env:
+        - name:
+        valueFrom:
+          fieldRef:
+            fieldPath:
+```
+    - Example
+```yaml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: pod-info-deployment
+  namespace: development
+  labels:
+    app: pod-info
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pod-info
+  template:
+    metadata:
+      labels:
+        app: pod-info
+    spec:
+      containers: 
+      - name: pod-info-container
+        image: kimschles/pod-info-app:latest
+        ports:
+        - containerPort: 3000
+```
+
 # Services and Networking
 
     Kubernetes Services: Learn how to expose your applications to the network and how to configure different types of services (e.g., ClusterIP, NodePort, LoadBalancer).
