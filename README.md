@@ -49,28 +49,29 @@
     - `Node`
         - Kubernetes cluster consist of set of nodes. Nodes are set of worker machines.
         - Components
-            1. kublet - agent that runs on each node in the cluster. Make sures containers are runnning in Pod.
-            2. kube-proxy - a network proxy that runs on each node in your cluster.
-            3. container runtime - It is responsible for managing the execution and lifecycle of containers within the Kubernetes environment.
-            4. addons - Addons use Kubernetes resources (DaemonSet, Deployment, etc) to implement cluster features.
-            5. DNS - Cluster DNS is a DNS server.
+            1. `kublet` - agent that runs on each node in the cluster. Make sures containers are runnning in Pod.
+            2. `kube-proxy` - a network proxy that runs on each node in your cluster.
+            3. `container runtime` - It is responsible for managing the execution and lifecycle of containers within the Kubernetes environment.
+            4. `addons` - Addons use Kubernetes resources (DaemonSet, Deployment, etc) to implement cluster features.
+            5. `DNS` - Cluster DNS is a DNS server.
             6. Web UI Dashboard - web-based UI for Kubernetes clusters.
-            7. Container Resource Monitoring - records generic time-series metrics
-            8. Cluster-level Logging - is responsible for saving container logs to a central log store with search/browsing interface.
-            9. Network Pluggins - are responsible for allocating IP addresses to pods and enabling them to communicate with each other within the cluster.
+            7. `Container Resource Monitoring` - records generic time-series metrics
+            8. `Cluster-level Logging `- is responsible for saving container logs to a central log store with search/browsing interface.
+            9. `Network Pluggins` - are responsible for allocating IP addresses to pods and enabling them to communicate with each other within the cluster.
 
     - `Pod`
         - Component of the application workload.
+
     - `Control Plane`
         - manages the worker nodes and the Pods in the cluster
         - Control plane's components make global decisions about the cluster.
         - Control plane components can be run on any machine in the cluster.
         - Components
-            1. kubi-apiserver - exposes Kubernetes API
-            2. etcd - Key value store for storing cluster data
-            3. kubi-scheduler -  watches newly created pod which has no assigned node and selects them node.
-            4. kube-controller-manager - runs controller process - like node controller, Service controller, Job controller, EndpointSlice controller
-            5. cloud-controller-manager - lets you link your cluster into your cloud provider's API
+            1. `kubi-apiserver` - exposes Kubernetes API
+            2. `etcd` - Key value store for storing cluster data
+            3. `kubi-scheduler` -  watches newly created pod which has no assigned node and selects them node.
+            4. `kube-controller-manager` - runs controller process - like node controller, Service controller, Job controller, EndpointSlice controller
+            5. `cloud-controller-manager` - lets you link your cluster into your cloud provider's API
 
 - <h3> Install : Kubernetes Install</h3>
     
