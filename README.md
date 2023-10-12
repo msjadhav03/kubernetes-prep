@@ -188,7 +188,7 @@ $ kubectl get deployments deployement_name
 $ kubectl get pod pod_name -o yaml
 ```
 - <h4>Deletion</h4>
-```sh
+```js
 # Deleting with YAML or json
 $ kubectl delete -f ./pod.json   
 ```
