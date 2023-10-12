@@ -121,7 +121,7 @@ spec:
           fieldRef:
             fieldPath:
 ```
-    - Example
+- Example
 ```yaml
 ---
 apiVersion: apps/v1
