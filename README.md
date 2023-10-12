@@ -148,15 +148,49 @@ spec:
         - containerPort: 3000
 ```
 - <h3>Kubernetes Commands</h3>
+- <h4>General</h4>
 ```sh
 # Get Cluster Info
 $ kubectl clutser-info
+
 # Get Nodes List
 $ kubectl get nodes
+
 # Get Namespace List
 $ kubectl get namespace
+```
+- <h4>Creation</h4>
+```sh
+# Create Resource
+$ kubectl apply -f yaml_file_name.yaml
+
+# Create Resource from link
+kubectl apply -f https://git.io/vPieo 
+
+# Create Multiple resource
+kubectl apply -f ./my1.yaml -f ./my2.yaml   
+```
+- <h4>Listing</h4>
+```sh
 # Get Pods List within specific pod
 $ kubectl get pods -n namespace_name
+
+# List Out Service
+$ kubectl get services 
+
+# Get pods from all namspaces
+$ kubectl get pods --all-namspaces
+
+# List out deployment
+$ kubectl get deployments deployement_name
+
+# Get pods YAML
+$ kubectl get pod pod_name -o yaml
+```
+- <h4>Deletion</h4>
+```sh
+# Deleting with YAML or json
+$ kubectl delete -f ./pod.json   
 ```
 # Services and Networking
 
