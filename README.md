@@ -44,7 +44,7 @@
     5. `Secrete and configuration mangement` - lets you store and manage sensitive information
     6. `Horizontal Scaling` - Scale your application up or down with simple command or UI
 
-- ## Kubernetes Components
+- <h3>Kubernetes Components</h3>
 
     - `Node`
         - Kubernetes cluster consist of set of nodes. Nodes are set of worker machines.
@@ -71,7 +71,7 @@
             3. kubi-scheduler -  watches newly created pod which has no assigned node and selects them node.
             4. kube-controller-manager - runs controller process - like node controller, Service controller, Job controller, EndpointSlice controller
             5. cloud-controller-manager - lets you link your cluster into your cloud provider's API
-            
+
 - ## Install : Kubernetes Install
     
     1. [Ubuntu Install](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
