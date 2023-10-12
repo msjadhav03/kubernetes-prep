@@ -79,7 +79,8 @@
     3. [Windows Install](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
 
 - <h3> Minikube : Install Minikube </h3>
-    - [Minicube Install](https://minikube.sigs.k8s.io/docs/start/)
+
+    1. [Minicube Install](https://minikube.sigs.k8s.io/docs/start/)
 
 # Services and Networking
 
