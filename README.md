@@ -147,7 +147,17 @@ spec:
         ports:
         - containerPort: 3000
 ```
-
+- <h3>Kubernetes Commands</h3>
+```sh
+# Get Cluster Info
+$ kubectl clutser-info
+# Get Nodes List
+$ kubectl get nodes
+# Get Namespace List
+$ kubectl get namespace
+# Get Pods List within specific pod
+$ kubectl get pods -n namespace_name
+```
 # Services and Networking
 
     Kubernetes Services: Learn how to expose your applications to the network and how to configure different types of services (e.g., ClusterIP, NodePort, LoadBalancer).
