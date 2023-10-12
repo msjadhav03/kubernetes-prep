@@ -35,7 +35,7 @@
 - It eliminates the need for orchestration.
 - Kubernetes comprises a set of independent, composable control processes that continuously drive the current state towards the provided desired state.
 
-- ## Features
+- <h3>Features</h3>
 
     1. `Service discovery and load balancing` - if traffic high kubenetes is able to load balance
     2. `Storage orchestration` - Allows mounting of storage system of choice
@@ -72,7 +72,7 @@
             4. kube-controller-manager - runs controller process - like node controller, Service controller, Job controller, EndpointSlice controller
             5. cloud-controller-manager - lets you link your cluster into your cloud provider's API
 
-- ## Install : Kubernetes Install
+- <h3> Install : Kubernetes Install</h3>
     
     1. [Ubuntu Install](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
     2. [MacOS Install](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
