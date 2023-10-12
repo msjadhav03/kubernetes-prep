@@ -78,7 +78,7 @@
     2. [MacOS Install](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
     3. [Windows Install](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
 
-- ## Minikube : Install Minikube
+- <h3> Minikube : Install Minikube </h3>
     - [Minicube Install](https://minikube.sigs.k8s.io/docs/start/)
 
 # Services and Networking
