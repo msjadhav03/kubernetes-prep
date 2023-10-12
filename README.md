@@ -190,7 +190,7 @@ $ kubectl get pod pod_name -o yaml
 - <h4>Deletion</h4>
 ```bash
 # Deleting with YAML or json
-kubectl delete -f ./pod.json   
+$ kubectl delete -f ./pod.json   
 ```
 # Services and Networking
 
